@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/wpwithin-doc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/wpwithin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/libthrift-0.9.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/wpwithin-deps.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

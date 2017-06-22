@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="libs/libthrift-0.9.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/lib/commons-codec-1.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/lib/commons-logging-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/lib/httpclient-4.4.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/lib/httpcore-4.4.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/lib/junit-4.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/lib/log4j-1.2.14.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/lib/servlet-api-2.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/lib/slf4j-api-1.5.8.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/lib/slf4j-api-1.7.12.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/lib/slf4j-log4j12-1.5.8.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/wpwithin-deps.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
