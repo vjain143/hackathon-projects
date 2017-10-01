@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="shortcut icon" href="https://www.wix.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://www.wix.com/favicon.ico" type="image/x-icon">
+    <script type="text/javascript">
+    var santaBase = 'https://static.parastorage.com/services/santa/1.2500.21';
+                var clientSideRender = true;
+                </script>
+
+    <script defer="" src="pages/home_files/require.min.js"></script>
+    <script defer="" src="pages/home_files/main-r.min.js"></script>
+
+
+    <link rel="prefetch" href="pages/home_files/react-with-addons.min.js">
+    <link rel="prefetch" href="pages/home_files/TweenMax.min.js">
+    <link rel="prefetch" href="pages/home_files/lodash.min.js">
+
+    <link rel="preconnect" href="https://static.wixstatic.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="stylesheet" href="css/ratchet.min.css">
+    <style>
+        .indexdiv {
+                position:absolute; height:100%; width:100%;
+                display: table;
+            }
+        .indexh3 {
+                display: table-cell;
+                vertical-align: middle;
+                text-align:center;
+        }
+     </style>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/ratchet.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/schooldata.js"></script>
+    <script type="text/javascript" src="js/collegedata.js"></script>
+    <script type="text/javascript" src="js/universitydata.js"></script>
+    <script type="text/javascript">
+        function loadSchool()
+        {
+            $("body").load(path + "pages/activity.html", function()
+            {
+                $.getScript(path + "js/index.js", function()
+                {
+                    if (currentPage.init)
+                    {
+                       currentPage.init();
+                    }
+                });
+            });
+        }
+
+
+
+        $(window).load(function()
+        {
+            centerContent();
+        });
+
+        $(window).resize(function()
+        {
+            centerContent();
+        });
+
+        function centerContent()
+        {
+            var container = $('#container');
+            var content = $('#content');
+            content.css("left", (container.width()-content.width())/2);
+            content.css("top", (container.height()-content.height())/2);
+        }
+    </script>
+
+</head>
+<body onload="init()">
+<div class="content-padded indexdiv" align="center">
+
+<h3 class="indexh3"><a onclick="loadSchool();">Home</a></h3>
+</div>
+</body>
+</html>
