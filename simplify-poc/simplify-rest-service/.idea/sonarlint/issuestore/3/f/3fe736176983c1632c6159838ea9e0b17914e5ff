@@ -1,0 +1,27 @@
+
+R
+java:S1854"9Remove this useless assignment to local variable "count".(”…üôşÿÿÿÿ
+H
+java:S1854"5Remove this useless assignment to local variable "d".(ûÆm
+‹
+java:S1130"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(º¶°“
+2
+java:S2119"Save and re-use this "Random".(¡Å”¦
+O	java:S125"<This block of commented-out lines of code should be removed.(†Ü•Ó
+O	java:S125"<This block of commented-out lines of code should be removed.(·ÿö©
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(ÌÉØ°ûÿÿÿÿ
+L	java:S106"9Replace this use of System.out or System.err by a logger.(ìùÿ
+O	java:S125"<This block of commented-out lines of code should be removed.(ô¸¾³
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(®³áşÿÿÿÿ
+O	java:S125"<This block of commented-out lines of code should be removed.(ô¸¾³
+L	java:S106"9Replace this use of System.out or System.err by a logger.( ØæÊ
+O	java:S125"<This block of commented-out lines of code should be removed.(ô¸¾³
+L	java:S106"9Replace this use of System.out or System.err by a logger.(×ŸîÒ
+O	java:S125"<This block of commented-out lines of code should be removed.(ô¸¾³
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(ã¦Ğøüÿÿÿÿ
+O	java:S125"<This block of commented-out lines of code should be removed.(ô¸¾³
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(’ñéŞüÿÿÿÿ
+9
+java:S1481"&Remove this unused "d" local variable.(ûÆm
+C
+java:S1481"*Remove this unused "count" local variable.(”…üôşÿÿÿÿ
