@@ -8,7 +8,6 @@
     "github.com/project-flogo/contrib/activity/actreturn",
     "github.com/project-flogo/contrib/activity/jsexec",
     "github.com/project-flogo/contrib/activity/log",
-    "github.com/project-flogo/contrib/function/coerce",
     "github.com/project-flogo/contrib/trigger/rest",
     "github.com/project-flogo/flow"
   ],
@@ -66,20 +65,24 @@
             {
               "name": "emi",
               "type": "double"
+            },
+            {
+              "name": "inputarray",
+              "type": "array"
             }
           ]
         },
         "tasks": [
           {
             "id": "log_2",
-            "name": "Log",
+            "name": "Log Input",
             "description": "Logs a message",
             "activity": {
               "ref": "#log",
               "input": {
                 "addDetails": false,
                 "usePrint": true,
-                "message": "=\"Amount : \"+$flow.amount+\", Rate : \"+$flow.rate+\", Years : \"+$flow.rate"
+                "message": "=\"Input [Amount : \"+$flow.amount+\", Rate : \"+$flow.rate+\", Years : \"+$flow.rate +\"]\""
               }
             }
           },
@@ -90,21 +93,28 @@
             "activity": {
               "ref": "#jsexec",
               "input": {
-                "parameters": {
-                  "mapping": {
-                    "amount": "$flow.amount",
-                    "rate": "$flow.rate",
-                    "years": "$flow.years"
-                  }
-                }
+                "parameters": "='{\"amount\":'+$flow.amount+',\"rate\":'+$flow.rate+',\"years\":'+$flow.years+'}'"
               },
               "settings": {
-                "script": "=coerce.toInt32(parameters.amount)"
+                "script": "var numberOfMonths = parameters.years * 12; var rateOfInterest = parameters.rate; var monthlyInterestRatio = (rateOfInterest / 100) / 12; var top = Math.pow((1 + monthlyInterestRatio), numberOfMonths); var bottom = top - 1; var sp = top / bottom; result.emi = ((parameters.amount * monthlyInterestRatio) * sp);"
               }
             }
           },
           {
-            "id": "actreturn_4",
+            "id": "log_4",
+            "name": "Log Output",
+            "description": "Logs a message",
+            "activity": {
+              "ref": "#log",
+              "input": {
+                "addDetails": false,
+                "usePrint": false,
+                "message": "=\"RESULT :: \"+$activity[jsexec_3].result.emi"
+              }
+            }
+          },
+          {
+            "id": "actreturn_5",
             "name": "Return",
             "description": "Return Activity",
             "activity": {
@@ -124,7 +134,11 @@
           },
           {
             "from": "jsexec_3",
-            "to": "actreturn_4"
+            "to": "log_4"
+          },
+          {
+            "from": "log_4",
+            "to": "actreturn_5"
           }
         ]
       }
